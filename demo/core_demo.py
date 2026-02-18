@@ -11,9 +11,7 @@ except ImportError:
 # Add src directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from py_llm_skills.core import SkillRegistry, Skill
-from py_llm_skills.patterns import Patterns
-from py_llm_skills.router import SkillRouter
+from py_llm_skills import SkillRegistry, Skill, SkillRouter, Patterns
 from py_llm_skills.llm.openai import OpenAIRequestClient, OpenAISDKAdapter
 
 def main():

@@ -7,7 +7,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../s
 
 from py_llm_skills.llm.openai import OpenAIRequestClient, OpenAISDKAdapter
 from py_llm_skills.llm.claude import AnthropicSkillManager
-from py_llm_skills.core import Skill
+from py_llm_skills import Skill
 
 @pytest.fixture
 def mock_skill():

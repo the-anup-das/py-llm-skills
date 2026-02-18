@@ -10,7 +10,7 @@ except ImportError:
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from py_llm_skills.core import SkillRegistry
+from py_llm_skills import SkillRegistry
 from py_llm_skills.llm.claude import AnthropicSkillManager
 
 def main():

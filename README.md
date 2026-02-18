@@ -122,8 +122,7 @@ You are a weather assistant. Fetch real-time data for the user's location.
 ### 2. Use in Python
 
 ```python
-from py_llm_skills.core import SkillRegistry, Skill
-from py_llm_skills.patterns import Patterns
+from py_llm_skills import SkillRegistry, Skill, Patterns
 
 # Load all skills from a directory
 registry = SkillRegistry()
