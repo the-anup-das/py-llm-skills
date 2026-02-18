@@ -4,14 +4,13 @@ import json
 
 try:
     from dotenv import load_dotenv
-    load_dotenv()
+    load_dotenv(override=True)
 except ImportError:
     pass
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from py_llm_skills.core import SkillRegistry
-from py_llm_skills.router import SkillRouter
+from py_llm_skills import SkillRegistry, SkillRouter
 from py_llm_skills.llm.openai import OpenAIRequestClient, OpenAISDKAdapter
 
 def main():

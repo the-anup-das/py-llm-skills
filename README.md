@@ -122,8 +122,7 @@ You are a weather assistant. Fetch real-time data for the user's location.
 ### 2. Use in Python
 
 ```python
-from py_llm_skills.core import SkillRegistry, Skill
-from py_llm_skills.patterns import Patterns
+from py_llm_skills import SkillRegistry, Skill, Patterns
 
 # Load all skills from a directory
 registry = SkillRegistry()
@@ -143,7 +142,28 @@ tool_def = weather.to_tool_definition()
 files = weather.to_anthropic_files()
 ```
 
-### 3. Upload to Claude (Anthropic Skills API)
+
+### 4. Structured Output
+Use Pydantic models to get type-safe, structured responses from your LLM (OpenAI/Anthropic).
+
+```python
+from pydantic import BaseModel
+from py_llm_skills.llm.openai import OpenAISDKAdapter
+
+class AnalysisResult(BaseModel):
+    summary: str
+    sentiment: float
+    tags: list[str]
+
+# ... initialize client ...
+result = client.chat_completion_with_structure(
+    messages=[{"role": "user", "content": "Analyze this..."}], 
+    response_model=AnalysisResult
+)
+print(result.summary)
+```
+
+### 5. Upload to Claude (Anthropic Skills API)
 
 Directly upload your local skills to the Anthropic beta API for server-side execution:
 
@@ -160,6 +180,13 @@ skill_id = manager.upload_skill(weather)
 # Use in messages via the container parameter
 container = manager.format_container_param([skill_id])
 ```
+
+## Skill Collections
+Looking for pre-built skills? Check out these awesome community repositories:
+
+- [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills) - A curated list of Claude-specific skills.
+- [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) - Broad collection of skills for various agent frameworks.
+- [github/awesome-copilot](https://github.com/github/awesome-copilot) - Useful extensions and tools that can be adapted as skills.
 
 ## Contributing
 

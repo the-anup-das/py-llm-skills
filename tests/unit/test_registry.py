@@ -6,7 +6,7 @@ import sys
 # Add src to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../src")))
 
-from py_llm_skills.core import SkillRegistry, Skill
+from py_llm_skills import SkillRegistry, Skill
 
 @pytest.fixture
 def mock_skill():

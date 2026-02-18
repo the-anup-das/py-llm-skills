@@ -5,7 +5,7 @@ import json
 # Add src directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from py_llm_skills.core import SkillRegistry
+from py_llm_skills import SkillRegistry
 
 def main():
     print("=" * 60)

@@ -4,8 +4,7 @@ import os
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../src")))
 
-from py_llm_skills.core import Skill
-from py_llm_skills.patterns import Patterns
+from py_llm_skills import Skill, Patterns
 
 @pytest.fixture
 def mock_skill():
