@@ -69,16 +69,35 @@ flowchart TD
 
 ## Installation
 
-We recommend using `uv` for modern Python project management:
+We recommend using `uv` for modern Python project management.
+
+### Quick Install (Recommended)
+Installs the core library plus **OpenAI** and **Anthropic** support.
+
+```bash
+uv add "py-llm-skills[full]"
+```
+
+### Lite Install (Core Only)
+Installs only the lightweight core. Useful if you want to bring your own LLM client.
 
 ```bash
 uv add py-llm-skills
 ```
 
-Or install with pip:
+### Specific Features
+You can also mix and match optional dependencies:
 
 ```bash
-pip install py-llm-skills
+uv add "py-llm-skills[openai]"    # Adds OpenAI SDK
+uv add "py-llm-skills[anthropic]" # Adds Anthropic SDK
+```
+
+### Pip Users
+If you are using standard `pip`:
+
+```bash
+pip install "py-llm-skills[full]"
 ```
 
 ## Quick Start
