@@ -1,7 +1,7 @@
 [project]
 name = "py-llm-skills"
-version = "0.1.0"
-description = "Add your description here"
+version = "0.1.2"
+description = "A Python SDK for building LLM with Skills."
 readme = "README.md"
 authors = [
     { name = "theanupllm", email = "theanupdas@protonmail.com" }
