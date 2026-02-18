@@ -87,7 +87,7 @@ wheels = [
 ]
 
 [[package]]
-name = "llm-skills"
+name = "py-llm-skills"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [

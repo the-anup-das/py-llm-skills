@@ -5,12 +5,12 @@ import json
 # Add src directory to path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 
-from llm_skills.core import SkillRegistry, Skill
-from llm_skills.patterns import Patterns
+from py_llm_skills.core import SkillRegistry, Skill
+from py_llm_skills.patterns import Patterns
 
 def main():
     print("=" * 60)
-    print("  LLM Skills – Core Demo")
+    print("  Py LLM Skills – Core Demo")
     print("=" * 60)
 
     # --- 1. Registry -------------------------------------------------------

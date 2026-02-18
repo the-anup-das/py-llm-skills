@@ -72,13 +72,13 @@ flowchart TD
 We recommend using `uv` for modern Python project management:
 
 ```bash
-uv add llm-skills
+uv add py-llm-skills
 ```
 
 Or install with pip:
 
 ```bash
-pip install llm-skills
+pip install py-llm-skills
 ```
 
 ## Quick Start
@@ -103,8 +103,8 @@ You are a weather assistant. Fetch real-time data for the user's location.
 ### 2. Use in Python
 
 ```python
-from llm_skills.core import SkillRegistry, Skill
-from llm_skills.patterns import Patterns
+from py_llm_skills.core import SkillRegistry, Skill
+from py_llm_skills.patterns import Patterns
 
 # Load all skills from a directory
 registry = SkillRegistry()
@@ -130,7 +130,7 @@ Directly upload your local skills to the Anthropic beta API for server-side exec
 
 ```python
 import anthropic
-from llm_skills.llm.claude import AnthropicSkillManager
+from py_llm_skills.llm.claude import AnthropicSkillManager
 
 client = anthropic.Anthropic()
 manager = AnthropicSkillManager(client)
