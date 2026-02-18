@@ -56,8 +56,6 @@ flowchart TD
     linkStyle default stroke-width:2px,fill:none,stroke:black;
 ```
 
-![Architecture Diagram](architecture.png)
-
 ## Features
 
 - **Standard Compliance**: Validates `SKILL.md` against official Anthropic rules (name format, length limits) to ensure compatibility with the Claude API.
