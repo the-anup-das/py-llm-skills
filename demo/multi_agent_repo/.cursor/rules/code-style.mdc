@@ -1,0 +1,5 @@
+---
+description: Enforce pep8
+globs: *.py
+---
+Use PEP8.

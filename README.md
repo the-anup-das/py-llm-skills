@@ -67,6 +67,21 @@ flowchart TD
   - **Function Calling**: Use `to_tool_definition()` to generate JSON schemas for OpenAI or Claude tool use.
   - **Native Anthropic**: Use `to_anthropic_files()` to bundle and upload skills directly to the Anthropic API for containerized execution.
 
+## Supported Agent Formats
+
+The SDK is **Polyglot** and can natively read skills from your favorite agent frameworks without modification:
+
+- **Claude**: `.claude/skills/**/SKILL.md` (and generic `Skills/` directories)
+- **Cursor**: `.cursor/rules/*.mdc` (Automatically parses frontmatter and globs)
+- **GitHub Copilot**: `.github/skills/*.md`
+
+Just point the `SkillRegistry` to your repository root, and it will auto-discover all supported formats:
+
+```python
+registry.auto_discover("/path/to/my-repo")
+```
+
+
 ## Installation
 
 We recommend using `uv` for modern Python project management.
